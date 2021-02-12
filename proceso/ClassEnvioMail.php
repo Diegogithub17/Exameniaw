@@ -30,7 +30,7 @@ class envioEmail {
         $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 
         //Asignamos el servidor
-        $mail->Host = 'smtp.gmail.com';
+        $mail->Host = 'smtp2.gmail.com';
         // usar
         // $mail->Host = gethostbyname('smtp.gmail.com');
         // Si tu red no soporta ipV6
@@ -45,16 +45,16 @@ class envioEmail {
         $mail->SMTPAuth = true;
 
         //Usuario que se logea en gmail - hay que usar la misma dirección de email completa
-        $mail->Username = 'andres.alcaraz@politecnicomalaga.com';
+        $mail->Username = 'smtp2.gmail.com';
 
         //Contraseña de gmail para la SMTP authentication
-        $mail->Password = 'NoLaVoyAPoner...Todavía';
+        $mail->Password = 'Estanolasabenadie1234';
 
         //Asignar el 'desde'
-        $mail->setFrom('andres.alcaraz@politecnicomalaga.com', 'Tienda Web 3.0');
+        $mail->setFrom('smtp2.gmail.com', 'Tienda Web 3.0');
 
         // reply-to address
-        $mail->addReplyTo('andres.alcaraz@politecnicomalaga.com', 'Tienda Web 3.0');
+        $mail->addReplyTo('smtp2.gmail.com', 'Tienda Web 3.0');
 
         //Dirección de envío
         $mail->addAddress($this->emailAddress, $this->emailAddress);
